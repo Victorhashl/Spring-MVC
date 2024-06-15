@@ -19,8 +19,28 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.3.0'
+//    testImplementation group: 'com.h2database', name: 'h2', version: '2.2.224'
+    testImplementation 'com.h2database:h2'
+
+    implementation 'org.modelmapper:modelmapper:3.2.0'
+
+
+//    implementation 'mysql:mysql-connector-java:8.0.33'
+//    implementation 'com.mysql:mysql-connector-j:8.4.0'
+
+
+//    implementation 'org.springframework.boot:spring-boot-starter-jdbc:3.3.0'
+
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.32'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
+
 }
 
 tasks.named('test') {

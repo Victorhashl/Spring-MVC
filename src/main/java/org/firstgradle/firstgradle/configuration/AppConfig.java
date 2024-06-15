@@ -3,6 +3,7 @@ package org.firstgradle.firstgradle.configuration;
 import org.firstgradle.firstgradle.DB;
 import org.firstgradle.firstgradle.DevDB;
 import org.firstgradle.firstgradle.ProdDB;
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,4 +22,10 @@ public class AppConfig {
     public DB getProdDbBean(){
         return new ProdDB();
     }
+
+    @Bean
+    public ModelMapper getModelMapper(){
+        return new ModelMapper();
+    }
+
 }
